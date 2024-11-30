@@ -1,2 +1,2 @@
-print("this is dumb")
+print("this is fantastic")
 
