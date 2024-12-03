@@ -39,7 +39,7 @@ def chatbot():
             print("HopeGPT: Hi there! How can I help you?")
         elif "how are you" in user_input or "how are u" in user_input:
             print("HopeGPT: I'm good. How are you? ")
-        elif "im fine" in user_input or "I'm good" in user_input or "im alright" in user_input or "fine" in user_input or "alright" in user_input:
+        elif "im fine" in user_input or "I'm good" in user_input or "im alright" in user_input or "fine" in user_input or "alright" in user_input or "im good" in user_input:
             print("HopeGPT: Cool! ")
         elif "your name" in user_input:
             print("HopeGPT: My name is HopeGPT. What's your name?")
