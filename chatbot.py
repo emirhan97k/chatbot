@@ -1,24 +1,25 @@
+# Importing required libraries for the chatbot
 import getpass # to get pc username
-import random # for random greeting
+import random # for random greeting and random joke
 
-# cool text from http://patorjk.com/software/taag/#p=testall&f=Broadway%20KB&t=HOPE%20CHATBOT
+# cool ASCII ART from http://patorjk.com/software/taag/#p=testall&f=Broadway%20KB&t=HOPE%20CHATBOT
 print("""
 ┓┏┏┓┏┓┏┓  ┏┓┓┏┏┓┏┳┓┳┓┏┓┏┳┓
 ┣┫┃┃┃┃┣   ┃ ┣┫┣┫ ┃ ┣┫┃┃ ┃ 
 ┛┗┗┛┣┛┗┛  ┗┛┛┗┛┗ ┻ ┻┛┗┛ ┻                     
 """)
 
-# get pc username
+# get pc username, link it to the variable username
 username = getpass.getuser()
 
-#function
+# creating chatbot function
 def chatbot():
 
     # creating a list for a selection of greetings
     greeting = ["What can I do for you?", "How may I help you today?", "How is it going?", "How are you doing?",
                 "Anything I can help with?", ]
 
-    # greeting
+    # greeting the user with a random greeting message chosen from the list above
     print(f"Hello {username}! {random.choice(greeting)} ")
 
     # loop
@@ -29,6 +30,7 @@ def chatbot():
                  "Why did the bicycle fall over? \n Because it was two-tired!",
                  "Why don’t scientists trust atoms? \n Because they make up everything! ",
                  "Why was the computer cold? \n Because it left its Windows open!", ]
+        # get user input here
         user_input = input().lower()  # .lower for error handling
 
         # possible chats and responds
@@ -41,17 +43,17 @@ def chatbot():
             print("HopeGPT: I'm good. How are you? ")
         elif "im fine" in user_input or "I'm good" in user_input or "im alright" in user_input or "fine" in user_input or "alright" in user_input or "im good" in user_input:
             print("HopeGPT: Cool! ")
-        elif "your name" in user_input:
+        elif "your name" in user_input or "ur name" in user_input:
             print("HopeGPT: My name is HopeGPT. What's your name?")
         elif "my name is" in user_input:
             print("Nice to meet you!")
         elif "who created you" in user_input:
-            print("This chatbot is created by Emirhan.")
+            print("This chatbot is created by Marky (Anonymous).")
         elif "a joke" in user_input:
             print(f"Here is a joke for you! \n {random.choice(jokes)} ")
         elif "haha" in user_input:
             print("Funny right!")
-        else:
+        else:  # Unexpected user inputs here
             print("HopeGPT: I'm not sure how to respond to that.")
 
 
